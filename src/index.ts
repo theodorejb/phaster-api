@@ -1,2 +1,2 @@
-export * from "./Api";
-export * from "./Endpoint";
+export * from "./Api.js";
+export * from "./Endpoint.js";
