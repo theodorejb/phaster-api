@@ -1,0 +1,35 @@
+{
+    "name": "phaster-api",
+    "version": "0.8.0",
+    "description": "Simplify integration with Phaster API endpoints.",
+    "files": [
+        "src/*.js",
+        "src/*.d.ts"
+    ],
+    "type": "module",
+    "main": "src/index.js",
+    "types": "./src/index.d.ts",
+    "scripts": {
+        "lint": "prettier --check .",
+        "format": "prettier --write .",
+        "prepare": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/theodorejb/phaster-api.git"
+    },
+    "keywords": [
+        "Phaster",
+        "API"
+    ],
+    "author": "Theodore Brown <theodorejb@outlook.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/theodorejb/phaster-api/issues"
+    },
+    "homepage": "https://github.com/theodorejb/phaster-api",
+    "devDependencies": {
+        "prettier": "^3.0.2",
+        "typescript": "^5.1.6"
+    }
+}
