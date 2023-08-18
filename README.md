@@ -12,12 +12,12 @@ Easily integrate with API endpoints built with [Phaster](https://github.com/theo
 import { Endpoint, request } from "phaster-api";
 ```
 
-The `request` function is a small wrapper around `fetch` which automatically parses JSON responses and adds the corresponding header to requests with a body.
+The `request` function is a small wrapper around `fetch` which automatically parses JSON responses.
 
-The `Endpoint` class simplifies requests to standard Phaster API endpoints:
+The `Endpoint` class simplifies requests to Phaster API endpoints:
 
 ```ts
-const users = new Endpoint<User>("/api/users");
+const users = new Endpoint<User>("/api/users", request);
 ```
 
 Each `Endpoint` instance has the following methods:
