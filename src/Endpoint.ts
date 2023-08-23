@@ -25,7 +25,7 @@ export class Endpoint<T extends { id: number | string }> {
     }
 
     public getById(id: number | string): Promise<T> {
-        return this.req(`${this.endpoint}/${id}`);
+        return this.req(`${this.endpoint}/${id}`).then((res) => res.data);
     }
 
     public postAll(entities: T[]): Promise<T[]> {
