@@ -1,7 +1,7 @@
 import { SearchResponse } from "./Endpoint";
 
-export function getApiParams(params: URLSearchParams, limitKey = "pageSize") {
-    const limit = +(params.get("limit") ?? localStorage.getItem(limitKey) ?? 25);
+export function getApiParams(params: URLSearchParams, defaultLimit = 25) {
+    const limit = +(params.get("limit") ?? defaultLimit);
     const page = +(params.get("page") ?? 1);
     const offset = limit * page - limit;
     const apiParams = new URLSearchParams();
