@@ -24,6 +24,10 @@ export class Endpoint<T extends { id: number | string }> {
         return this.req(`${this.endpoint}?${params}`);
     }
 
+    public count(params: URLSearchParams): Promise<{ count: number }> {
+        return this.req(`${this.endpoint}/count?${params}`);
+    }
+
     public getById(id: number | string): Promise<T> {
         return this.req(`${this.endpoint}/${id}`).then((res) => res.data);
     }

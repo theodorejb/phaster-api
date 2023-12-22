@@ -1,6 +1,6 @@
 {
     "name": "phaster-api",
-    "version": "0.9.1",
+    "version": "1.0.0",
     "description": "Simplify integration with Phaster API endpoints.",
     "files": [
         "src/*.js",
@@ -29,7 +29,7 @@
     },
     "homepage": "https://github.com/theodorejb/phaster-api",
     "devDependencies": {
-        "prettier": "^3.0.3",
-        "typescript": "^5.2.2"
+        "prettier": "^3.1.1",
+        "typescript": "^5.3.3"
     }
 }
