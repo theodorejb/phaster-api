@@ -1,6 +1,6 @@
 # Phaster API
 
-Easily integrate with API endpoints built with [Phaster](https://github.com/theodorejb/phaster).
+Easily integrate with API endpoints built with [Phaster](https://github.com/devtheorem/phaster).
 
 ## Installation
 

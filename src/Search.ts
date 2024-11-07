@@ -22,6 +22,16 @@ export function getApiParams(params: URLSearchParams, defaultLimit = 25) {
     };
 }
 
+export function hasSortParam(params: URLSearchParams) {
+    for (const param of params) {
+        if (param[0].startsWith("sort[")) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 export interface SearchPageData<T> {
     items: T[];
     params: { [key: string]: string };
