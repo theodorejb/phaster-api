@@ -33,6 +33,10 @@ export class Endpoint<T extends { id: number | string }> {
     }
 
     public postAll(entities: T[]): Promise<T[]> {
+        if (!entities.length) {
+            return Promise.resolve([]);
+        }
+
         return this.req(this.endpoint, { method: "POST", body: JSON.stringify(entities) }).then(
             (data: { ids: number[] }) => {
                 return data.ids.map((id, index) => ({ ...entities[index], id }));
@@ -64,6 +68,10 @@ export class Endpoint<T extends { id: number | string }> {
     }
 
     public delete(id: number | string): Promise<null> {
+        if (id === "") {
+            return Promise.resolve(null);
+        }
+
         return this.req(`${this.endpoint}/${id}`, { method: "DELETE" });
     }
 }
